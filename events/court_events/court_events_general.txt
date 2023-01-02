@@ -9480,6 +9480,112 @@ court.4750 = {
 	}
 	
 	# Warcraft
+
+	option = {
+		name = court.4750.a
+		add_character_flag = thoradin
+		add_character_flag = ruler_character
+		trigger = {
+			thoradin_trigger = yes
+		}
+		change_current_court_grandeur = minor_court_grandeur_gain
+		ai_chance = {
+			base = 50
+			ai_value_modifier = {
+				ai_zeal = 0.5
+				ai_vengefulness = -0.5
+			}
+		}
+	}
+
+	option = {
+		name = court.4750.b
+		add_character_flag = nelgarm
+		add_character_flag = ruler_character
+		trigger = {
+			nelgarm_trigger = yes
+		}
+		change_current_court_grandeur = minor_court_grandeur_gain
+		ai_chance = {
+			base = 50
+			ai_value_modifier = {
+				ai_boldness = 0.5
+			}
+		}
+	}
+	
+	option = {
+		name = court.4750.c
+		add_character_flag = malfurion
+		add_character_flag = ruler_character
+		trigger = {
+			malfurion_trigger = yes
+			nelgarm_trigger = no
+		}
+		change_current_court_grandeur = minor_court_grandeur_gain
+		ai_chance = {
+			base = 50
+			ai_value_modifier = {
+				ai_boldness = 0.25
+				ai_rationality = -0.5
+			}
+		}
+	}
+
+	option = {
+		name = court.4750.d
+		add_character_flag = huln
+		add_character_flag = ruler_character
+		trigger = {
+			huln_trigger = yes
+		}
+		change_current_court_grandeur = minor_court_grandeur_gain
+		ai_chance = {
+			base = 50
+			ai_value_modifier = {
+				ai_vengefulness = 0.75
+				ai_rationality = -0.5
+			}
+		}
+	}
+
+	option = {
+		name = court.4750.e
+		add_character_flag = dazar
+		add_character_flag = ruler_character
+		trigger = {
+			dazar_trigger = yes
+			nelgarm_trigger = no
+			thoradin_trigger = no
+		}
+		change_current_court_grandeur = minor_court_grandeur_gain
+		ai_chance = {
+			base = 50
+			ai_value_modifier = {
+				ai_honor = 0.75
+				ai_rationality = 0.5
+			}
+		}
+	}
+
+	option = {
+		name = court.4750.f
+		add_character_flag = evil
+		add_character_flag = ruler_character
+		trigger = {
+			evil_trigger = yes
+			nelgarm_trigger = no
+			thoradin_trigger = no
+		}
+		change_current_court_grandeur = minor_court_grandeur_loss
+		ai_chance = {
+			base = 50
+			ai_value_modifier = {
+				ai_honor = 0.75
+				ai_rationality = 0.5
+			}
+		}
+	}
 	
 	option = {
 		name = court.4750.g
@@ -9529,11 +9635,11 @@ court.4750 = {
 scripted_effect court_4751_flag_removal_effect = {
 	remove_character_flag = ruler_character
 	remove_character_flag = ruler_hero
-	remove_character_flag = lady_godiva
-	remove_character_flag = sinbad
-	remove_character_flag = caligula
-	remove_character_flag = nasreddin
-	remove_character_flag = valmiki
+	remove_character_flag = nelgarm
+	remove_character_flag = malfurion
+	remove_character_flag = huln
+	remove_character_flag = dazar
+	remove_character_flag = evil
 }
 
 court.4751 = {
@@ -9544,33 +9650,39 @@ court.4751 = {
 		first_valid = {
 			triggered_desc = {
 				trigger = {
-					has_character_flag = lady_godiva
+					has_character_flag = thoradin
 				}
-				desc = court.4751.topic.lady_godiva
+				desc = court.4751.topic.thoradin
 			}
 			triggered_desc = {
 				trigger = {
-					has_character_flag = sinbad
+					has_character_flag = nelgarm
 				}
-				desc = court.4751.topic.sinbad
+				desc = court.4751.topic.nelgarm
 			}
 			triggered_desc = {
 				trigger = {
-					has_character_flag = caligula
+					has_character_flag = malfurion
 				}
-				desc = court.4751.topic.caligula
+				desc = court.4751.topic.malfurion
 			}
 			triggered_desc = {
 				trigger = {
-					has_character_flag = nasreddin
+					has_character_flag = huln
 				}
-				desc = court.4751.topic.nasreddin
+				desc = court.4751.topic.huln
 			}
 			triggered_desc = {
 				trigger = {
-					has_character_flag = valmiki
+					has_character_flag = dazar
 				}
-				desc = court.4751.topic.valmiki
+				desc = court.4751.topic.dazar
+			}
+			triggered_desc = {
+				trigger = {
+					has_character_flag = evil
+				}
+				desc = court.4751.topic.evil
 			}
 			triggered_desc = {
 				trigger = {
@@ -9589,12 +9701,6 @@ court.4751 = {
 			}
 			triggered_desc = {
 				trigger = {
-					has_character_flag = pope_joan
-				}
-				desc = court.4701.pope_joan_desc
-			}
-			triggered_desc = {
-				trigger = {
 					has_character_flag = ruler_hero
 				}
 				desc = court.4701.ruler_hero_desc
@@ -9603,33 +9709,39 @@ court.4751 = {
 		first_valid = {
 			triggered_desc = {
 				trigger = {
-					has_character_flag = lady_godiva
+					has_character_flag = thoradin
 				}
-				desc = court.4751.topic.lady_godiva_desc
+				desc = court.4751.topic.thoradin_desc
 			}
 			triggered_desc = {
 				trigger = {
-					has_character_flag = sinbad
+					has_character_flag = nelgarm
 				}
-				desc = court.4751.topic.sinbad_desc
+				desc = court.4751.topic.nelgarm_desc
 			}
 			triggered_desc = {
 				trigger = {
-					has_character_flag = caligula
+					has_character_flag = malfurion
 				}
-				desc = court.4751.topic.caligula_desc
+				desc = court.4751.topic.malfurion_desc
 			}
 			triggered_desc = {
 				trigger = {
-					has_character_flag = nasreddin
+					has_character_flag = huln
 				}
-				desc = court.4751.topic.nasreddin_desc
+				desc = court.4751.topic.huln_desc
 			}
 			triggered_desc = {
 				trigger = {
-					has_character_flag = valmiki
+					has_character_flag = dazar
 				}
-				desc = court.4751.topic.valmiki_desc
+				desc = court.4751.topic.dazar_desc
+			}
+			triggered_desc = {
+				trigger = {
+					has_character_flag = evil
+				}
+				desc = court.4751.topic.evil_desc
 			}
 		}
 	}
@@ -9645,316 +9757,139 @@ court.4751 = {
 		court_4751_flag_removal_effect = yes
 	}
 
-	immediate = {
-		hidden_effect = {
-			if = {
-				limit = {
-					has_character_flag = pope_joan
-					scope:poet = { NOT = { has_trait = zealous } }
-				}
-				scope:poet = {
-					add_secret = {
-						type = secret_non_believer
-					}
-				}
-				faith.religious_head = {
-					save_scope_as = current_head_of_faith
-				}
-			}
-		}
-	
-		save_scope_as = owner
-	}
-
 	option = { 
 		name = court.4751.a
 		trigger = {
-			has_character_flag = pope_joan
-			is_attracted_to_gender_of = scope:poet
-		}
-		if = {
-			limit = {
-				can_set_relation_potential_lover_trigger = { CHARACTER = scope:poet }
-			}
-			set_relation_potential_lover = scope:poet
+			has_character_flag = thoradin
 		}
 		create_artifact = {
-			name = pope_joan_book_name
-			description = pope_joan_book_desc
+			name = thoradin_book_name
+			description = thoradin_book_desc
 			type = book
 			visuals = book
-			modifier = artifact_monthly_piety_2_modifier
-			save_scope_as = pope_joan_book
+			modifier = artifact_monthly_prestige_2_modifier
+			save_scope_as = thoradin_book
+		}
+		add_character_modifier = {
+			modifier = compared_to_thoradin
+			years = 5
 		}
 		ai_chance = {
 			base = 50
-			ai_value_modifier = {
-				ai_boldness = 0.75
-				ai_rationality = -0.5
-				ai_zeal = -0.75
-			}
 		}
 	}
 
-	option = {
+	option = { 
 		name = court.4751.b
 		trigger = {
-			has_character_flag = pope_joan
-			NOT = { root = scope:current_head_of_faith }
+			has_character_flag = nelgarm
 		}
 		create_artifact = {
-			name = pope_joan_book_name
-			description = pope_joan_book_desc
-			type = book
-			visuals = book
-			modifier = artifact_monthly_piety_2_modifier
-			save_scope_as = pope_joan_book
-		}
-		hidden_effect = {
-			scope:current_head_of_faith = {
-				if = {
-					limit = { is_ai = yes }
-					random_list = {
-						10 = {
-							trigger = {
-								is_cannibal_trigger = no
-							}
-							add_secret = {
-								type = secret_cannibal
-							}
-						}
-						10 = {
-							trigger = {
-								is_deviant_trigger = no
-							}
-							add_secret = {
-								type = secret_deviant
-							}
-						}
-						10 = {
-							trigger = {
-								NOT = { any_secret = { secret_type = secret_non_believer } }
-							}
-							give_non_believer_secret_effect = yes
-						}
-						10 = {
-							trigger = {
-								NOT = { has_trait = fornicator }
-							}
-							add_trait = fornicator
-						}
-					}
-				}
-			}
-		}
-		ai_chance = {
-			base = 50
-			ai_value_modifier = {
-				ai_boldness = 0.75
-				ai_rationality = -0.5
-				ai_zeal = 0.75
-			}
-		}
-	}
-	
-	option = {
-		name = court.4751.c
-		flavor = court.4751.c.tt
-		add_character_modifier = {
-			modifier = compared_to_lady_godiva
-			years = 5
-		}
-		trigger = {
-			has_character_flag = lady_godiva
-		}
-		if = {
-			limit = {
-				any_relation = {
-					type = potential_lover
-				}
-			}
-			random_relation = {
-				type = potential_lover
-				save_scope_as = potential_lover
-			}
-			progress_towards_lover_effect = {
-				CHARACTER = scope:potential_lover
-				OPINION = no
-			}
-		}
-		random_courtier_or_guest = {
-			limit = {
-				is_attracted_to_gender_of = root
-				root = { is_attracted_to_gender_of = prev }
-			}
-			weight = {
-				base = 1
-				modifier = {
-					has_trait = lustful
-					add = 50
-				}
-				modifier = {
-					has_trait_beauty_good_trigger = yes 
-					add = 50
-				}
-			}
-			set_relation_potential_lover = root
-		}
-		random_vassal = {
-			limit = {
-				is_attracted_to_gender_of = root
-				root = { is_attracted_to_gender_of = prev }
-			}
-			set_relation_potential_lover = root
-			weight = {
-				base = 1
-				modifier = {
-					has_trait = lustful
-					add = 50
-				}
-				modifier = {
-					has_trait_beauty_good_trigger = yes 
-					add = 50
-				}
-			}
-		}
-		create_artifact = {
-			name = lady_godiva_book_name
-			description = lady_godiva_book_desc
-			type = book
-			visuals = book
-			modifier = artifact_attraction_opinion_3_modifier
-			save_scope_as = lady_godiva_book
-		}
-		ai_chance = {
-			base = 50
-			ai_value_modifier = {
-				ai_greed = 0.75
-			}
-		}
-	}
-	option = {
-		name = court.4751.d
-		trigger = {
-			has_character_flag = caligula
-		}
-		add_trait = flagellant
-		create_artifact = {
-			name = caligula_book_name
-			description = caligula_book_desc
+			name = nelgarm_book_name
+			description = nelgarm_book_desc
 			type = book
 			visuals = book
 			modifier = artifact_dread_gain_mult_1_modifier
-			save_scope_as = caligula_book
+			save_scope_as = nelgarm_book
+		}
+		add_character_modifier = {
+			modifier = compared_to_nelgarm
+			years = 5
 		}
 		ai_chance = {
 			base = 50
-			ai_value_modifier = {
-				ai_vengefulness = 0.75
-				ai_rationality = -0.5
-				ai_honor = -0.75
-			}
 		}
 	}
 
-	option = {
-		name = court.4751.e
+	option = { 
+		name = court.4751.c
 		trigger = {
-			has_character_flag = nasreddin
-		}
-		add_character_modifier = {
-			modifier = compared_to_nasreddin
-			years = 5
+			has_character_flag = malfurion
 		}
 		create_artifact = {
-			name = nasreddin_book_name
-			description = nasreddin_book_desc
+			name = malfurion_book_name
+			description = malfurion_book_desc
 			type = book
 			visuals = book
 			modifier = artifact_monthly_diplomacy_lifestyle_xp_1_modifier
-			save_scope_as = nasreddin_book
+			save_scope_as = malfurion_book
+		}
+		add_character_modifier = {
+			modifier = compared_to_malfurion
+			years = 5
 		}
 		ai_chance = {
 			base = 50
-			ai_value_modifier = {
-				ai_honor = 0.75
-			}
 		}
 	}
-	option = {
+
+	option = { 
+		name = court.4751.d
+		trigger = {
+			has_character_flag = huln
+		}
+		create_artifact = {
+			name = huln_book_name
+			description = huln_book_desc
+			type = book
+			visuals = book
+			modifier = artifact_monthly_martial_lifestyle_xp_1_modifier
+			save_scope_as = huln_book
+		}
+		add_character_modifier = {
+			modifier = compared_to_huln
+			years = 5
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+
+	option = { 
+		name = court.4751.e
+		trigger = {
+			has_character_flag = dazar
+		}
+		create_artifact = {
+			name = dazar_book_name
+			description = dazar_book_desc
+			type = book
+			visuals = book
+			modifier = artifact_monthly_piety_2_modifier
+			save_scope_as = dazar_book
+		}
+		add_character_modifier = {
+			modifier = compared_to_dazar
+			years = 5
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+
+	option = { 
 		name = court.4751.f
 		trigger = {
-			NOT = {
-				has_character_flag = pope_joan
-			}
+			has_character_flag = evil
 		}
-		if = {
-			limit = { has_character_flag = valmiki }
-			add_character_modifier = {
-				modifier = compared_to_valmiki
-				years = 5
-			}
-			create_artifact = {
-				name = valmiki_book_name
-				description = valmiki_book_desc
-				type = book
-				visuals = book
-				modifier = artifact_monthly_diplomacy_lifestyle_xp_1_modifier
-				save_scope_as = valmiki_book
-			}
+		create_artifact = {
+			name = evil_book_name
+			description = evil_book_desc
+			type = book
+			visuals = book
+			modifier = artifact_dread_gain_mult_1_modifier
+			save_scope_as = evil_book
 		}
-		if = {
-			limit = { has_character_flag = caligula }
-			add_character_modifier = {
-				modifier = compared_to_caligula
-				years = 5
-			}
-			create_artifact = {
-				name = caligula_book_name
-				description = caligula_book_desc
-				type = book
-				visuals = book
-				modifier = artifact_monthly_diplomacy_lifestyle_xp_1_modifier
-				save_scope_as = caligula_book
-			}
-		}
-		if = {
-			limit = {
-				has_character_flag = ruler_hero
-			}
-			create_artifact = {
-				name = ruler_hero_book_name
-				description = ruler_hero_book_desc
-				type = book
-				visuals = book
-				modifier = artifact_monthly_diplomacy_lifestyle_xp_1_modifier
-				save_scope_as = ruler_hero_book
-			}
-		}
-		if = {
-			limit = {
-				has_character_flag = sinbad
-			}
-			add_character_modifier = {
-				modifier = compared_to_sinbad
-				years = 5
-			}
-			create_artifact = {
-				name = sinbad_book_name
-				description = sinbad_book_desc
-				type = book
-				visuals = book
-				modifier = artifact_monthly_martial_lifestyle_xp_1_modifier
-				save_scope_as = sinbad_hero_book
-			}
+		add_character_modifier = {
+			modifier = compared_to_evil
+			years = 5
 		}
 		ai_chance = {
 			base = 50
-			ai_value_modifier = {
-				ai_sociability = 0.75
-			}
 		}
 	}
+	
+	
 	option = {
 		name = court.4751.g
 		trigger = { has_character_flag = ruler_hero }
@@ -9982,22 +9917,10 @@ court.4751 = {
 				target = root
 			}
 		}
-		if = {
-			limit = { has_character_flag = lady_godiva }
-			every_courtier_or_guest = {
-				limit = { has_trait = lustful }
-				custom = all_lustful_in_the_court
-				add_opinion = {
-					modifier = disappointed_opinion
-					opinion = -10
-					target = root
-				}
-			}
-		}
 		ai_chance = {
 			base = 50
 			ai_value_modifier = {
-				ai_vengefulness = 0.75
+				ai_vengefulness = 2
 			}
 		}
 	}

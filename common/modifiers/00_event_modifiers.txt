@@ -559,26 +559,29 @@ poisoned_wine_cellar = {
 # }
 
 #Heroic comparisons
-compared_to_valmiki = {
-	icon = learning_positive
-	monthly_lifestyle_xp_gain_mult = 0.15
-}
 
-compared_to_lady_godiva = {
-	icon = fertility_positive
-	attraction_opinion = 15
+compared_to_thoradin = {
+	icon = family_positive
+	learning_per_prestige_level = 1
 }
-compared_to_nasreddin= {
+compared_to_nelgarm = {
+	icon = magic_positive
+	stress_gain_mult = 0.9
+}
+compared_to_malfurion= {
 	icon = learning_positive
 	monthly_lifestyle_xp_gain_mult = 0.15
 }
-compared_to_sinbad= {
-	icon = magic_positive
-	naval_movement_speed_mult = 0.05
-	monthly_prestige_gain_mult = 0.05
+compared_to_huln = {
+	icon = outdoors_positive
+	monthly_prestige = 0.2
 }
-compared_to_caligula= {
-	icon = horse_positive
+compared_to_dazar= {
+	icon = economy_positive
+	monthly_income_mult = 0.1
+}
+compared_to_evil= {
+	icon = dread_positive
 	dread_gain_mult = 0.2
 	direct_vassal_opinion = -5
 }

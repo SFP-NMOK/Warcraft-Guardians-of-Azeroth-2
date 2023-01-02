@@ -70,3 +70,10 @@
 
  union_member_modifier:0 "$game_concept_union_member$"
  union_member_modifier_desc:0 "This character is a [union_member|E]."
+
+ compared_to_thoradin:0 "Compared to King Thoradin"
+ compared_to_nelgarm:0 "Compared to Nelgarm"
+ compared_to_malfurion:0 "Compared to Malfurion"
+ compared_to_huln:0 "Compared to Huln Highmountain"
+ compared_to_dazar:0 "Compared to King Dazar"
+ compared_to_evil:0 "Compared to ancient evil"
